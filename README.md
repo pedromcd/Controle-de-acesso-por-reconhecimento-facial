@@ -119,7 +119,7 @@ Pressione Q para sair.
 
 Arquivo config.py:
 
-THRESHOLD = 0.38   # ajuste de sensibilidade
+THRESHOLD = 0.38   # ajuste de sensibilidade - 
 CAM_INDEX = 0      # índice da câmera (0 = webcam padrão)
 
 Se o sistema estiver reconhecendo errado:
@@ -132,13 +132,13 @@ Diminua o threshold (ex.: 0.33) → mais permissivo (menos falsos negativos).
 
 ## 📚 Estrutura do Projeto
 face-access-control/
-├── config.py         # Configurações gerais
-├── db_utils.py       # Funções de banco de dados (SQLite)
-├── face_utils.py     # Utilidades de reconhecimento facial
-├── enroll.py         # Cadastro de usuários
-├── recognize.py      # Reconhecimento em tempo real
-├── requirements.txt  # Dependências do projeto
-└── README.md         # Documentação
+├── config.py         # Configurações gerais - 
+├── db_utils.py       # Funções de banco de dados (SQLite) - 
+├── face_utils.py     # Utilidades de reconhecimento facial - 
+├── enroll.py         # Cadastro de usuários - 
+├── recognize.py      # Reconhecimento em tempo real - 
+├── requirements.txt  # Dependências do projeto - 
+├── README.md         # Documentação - 
 
 
 
