@@ -4,7 +4,7 @@ Projeto acadêmico da disciplina de **Processamento de Imagens e Sinais** (Ciên
 O sistema utiliza **OpenCV** e **InsightFace (ArcFace)** para reconhecimento facial, controlando o acesso de pessoas cadastradas.
 
 
---------------------------------
+
 
 
 ## 🚀 Funcionalidades
@@ -22,7 +22,7 @@ O sistema utiliza **OpenCV** e **InsightFace (ArcFace)** para reconhecimento fac
   - Alteração de câmera e threshold em `config.py`.
 
 
---------------------------------
+
 
 
 ## 🛠 Tecnologias
@@ -32,7 +32,7 @@ O sistema utiliza **OpenCV** e **InsightFace (ArcFace)** para reconhecimento fac
 - [ONNX Runtime](https://onnxruntime.ai/)
 - [SQLite](https://www.sqlite.org/)
 
---------------------------------
+
 
 ## 📦 Instalação
 
@@ -43,7 +43,7 @@ git clone https://github.com/seu-usuario/face-access-control.git
 cd face-access-control
 
 
---------------------------------
+
 
 
 Crie e ative um ambiente virtual:
@@ -60,14 +60,14 @@ Linux/Mac
 source .venv/bin/activate
 
 
---------------------------------
+
 
 Instale as dependências:
 
 pip install -r requirements.txt
 
 
---------------------------------
+
 
 
 ## ▶️ Como Usar
@@ -92,7 +92,7 @@ Pressione Q para sair.
 O sistema salva os embeddings no banco face_access.db.
 
 
---------------------------------
+
 
 
 2. Reconhecimento em tempo real (recognize.py)
@@ -112,7 +112,7 @@ A face aparecerá com um retângulo vermelho e a mensagem NEGADO.
 Pressione Q para sair.
 
 
---------------------------------
+
 
 
 ## ⚙️ Configurações
@@ -127,7 +127,7 @@ Aumente o threshold (ex.: 0.45) → mais rígido (menos falsos positivos).
 Diminua o threshold (ex.: 0.33) → mais permissivo (menos falsos negativos).
 
 
---------------------------------
+
 
 
 ## 📚 Estrutura do Projeto
@@ -141,7 +141,7 @@ face-access-control/
 └── README.md         # Documentação
 
 
---------------------------------
+
 
 
 ## 📊 Demonstração Esperada
@@ -150,7 +150,7 @@ Usuário cadastrado → caixa verde + "ACESSO".
 Usuário não cadastrado → caixa vermelha + "NEGADO".
 
 
---------------------------------
+
 
 
 ## 👨‍🎓Autor
