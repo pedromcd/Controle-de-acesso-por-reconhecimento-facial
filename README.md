@@ -46,23 +46,21 @@ cd face-access-control
 
 
 
-Crie e ative um ambiente virtual:
+- Crie e ative um ambiente virtual:
 
 python -m venv .venv
 
 Windows (PowerShell)
 .\.venv\Scripts\Activate.ps1
-
 Windows (CMD)
 .\.venv\Scripts\activate.bat
-
 Linux/Mac
 source .venv/bin/activate
 
 
 
 
-Instale as dependências:
+- Instale as dependências:
 
 pip install -r requirements.txt
 
@@ -132,13 +130,13 @@ Diminua o threshold (ex.: 0.33) → mais permissivo (menos falsos negativos).
 
 ## 📚 Estrutura do Projeto
 face-access-control/
-├── config.py         # Configurações gerais - 
-├── db_utils.py       # Funções de banco de dados (SQLite) - 
-├── face_utils.py     # Utilidades de reconhecimento facial - 
-├── enroll.py         # Cadastro de usuários - 
-├── recognize.py      # Reconhecimento em tempo real - 
-├── requirements.txt  # Dependências do projeto - 
-├── README.md         # Documentação - 
+- config.py         # Configurações gerais
+- db_utils.py       # Funções de banco de dados (SQLite) 
+- face_utils.py     # Utilidades de reconhecimento facial 
+- enroll.py         # Cadastro de usuários 
+- recognize.py      # Reconhecimento em tempo real 
+- requirements.txt  # Dependências do projeto 
+- README.md         # Documentação 
 
 
 
