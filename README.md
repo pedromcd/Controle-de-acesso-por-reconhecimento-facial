@@ -6,7 +6,6 @@ O sistema utiliza **OpenCV** e **InsightFace (ArcFace)** para reconhecimento fac
 
 
 
-
 ## 🚀 Funcionalidades
 - 📸 **Cadastro de usuários (enroll.py):**
   - Captura imagens da câmera.
@@ -20,7 +19,6 @@ O sistema utiliza **OpenCV** e **InsightFace (ArcFace)** para reconhecimento fac
   - Armazena embeddings em SQLite.
 - ⚙️ **Configurações:**  
   - Alteração de câmera e threshold em `config.py`.
-
 
 
 
@@ -44,8 +42,6 @@ cd face-access-control
 
 
 
-
-
 - Crie e ative um ambiente virtual:
 
 python -m venv .venv
@@ -59,12 +55,9 @@ source .venv/bin/activate
 
 
 
-
 - Instale as dependências:
 
 pip install -r requirements.txt
-
-
 
 
 
@@ -73,9 +66,7 @@ pip install -r requirements.txt
 1. Cadastro de usuário (enroll.py)
 
 Esse script serve para cadastrar novas pessoas no banco de dados.
-
 python enroll.py
-
 
 Digite o nome da pessoa.
 
@@ -88,8 +79,6 @@ Repita 5 vezes, mudando levemente a posição/expressão para aumentar a precis�
 Pressione Q para sair.
 
 O sistema salva os embeddings no banco face_access.db.
-
-
 
 
 
@@ -111,44 +100,36 @@ Pressione Q para sair.
 
 
 
-
-
 ## ⚙️ Configurações
 
 Arquivo config.py:
 
-THRESHOLD = 0.38   # ajuste de sensibilidade - 
-CAM_INDEX = 0      # índice da câmera (0 = webcam padrão)
+- THRESHOLD = 0.38   # ajuste de sensibilidade
+- CAM_INDEX = 0      # índice da câmera (0 = webcam padrão)
 
 Se o sistema estiver reconhecendo errado:
-Aumente o threshold (ex.: 0.45) → mais rígido (menos falsos positivos).
-Diminua o threshold (ex.: 0.33) → mais permissivo (menos falsos negativos).
-
-
+- Aumente o threshold (ex.: 0.45) → mais rígido (menos falsos positivos).
+- Diminua o threshold (ex.: 0.33) → mais permissivo (menos falsos negativos).
 
 
 
 ## 📚 Estrutura do Projeto
 face-access-control/
-- config.py         # Configurações gerais
-- db_utils.py       # Funções de banco de dados (SQLite) 
-- face_utils.py     # Utilidades de reconhecimento facial 
-- enroll.py         # Cadastro de usuários 
-- recognize.py      # Reconhecimento em tempo real 
-- requirements.txt  # Dependências do projeto 
-- README.md         # Documentação 
-
-
+- config.py        -  # Configurações gerais
+- db_utils.py      -  # Funções de banco de dados (SQLite) 
+- face_utils.py    -  # Utilidades de reconhecimento facial 
+- enroll.py        -  # Cadastro de usuários 
+- recognize.py     -  # Reconhecimento em tempo real 
+- requirements.txt -  # Dependências do projeto 
+- README.md        -  # Documentação 
 
 
 
 ## 📊 Demonstração Esperada
 
-Usuário cadastrado → caixa verde + "ACESSO".
-Usuário não cadastrado → caixa vermelha + "NEGADO".
-
-
-
+- Usuário cadastrado → caixa verde + "ACESSO".
+- Usuário não cadastrado → caixa vermelha + "NEGADO".
+  
 
 
 ## 👨‍🎓Autor
