@@ -3,7 +3,9 @@
 Projeto acadêmico da disciplina de **Processamento de Imagens e Sinais** (Ciência da Computação), desenvolvido em Python.  
 O sistema utiliza **OpenCV** e **InsightFace (ArcFace)** para reconhecimento facial, controlando o acesso de pessoas cadastradas.
 
----------------------------------------------------------
+
+--------------------------------
+
 
 ## 🚀 Funcionalidades
 - 📸 **Cadastro de usuários (enroll.py):**
@@ -19,7 +21,9 @@ O sistema utiliza **OpenCV** e **InsightFace (ArcFace)** para reconhecimento fac
 - ⚙️ **Configurações:**  
   - Alteração de câmera e threshold em `config.py`.
 
----------------------------------------------------------
+
+--------------------------------
+
 
 ## 🛠 Tecnologias
 - [Python 3.10+](https://www.python.org/)
@@ -28,7 +32,7 @@ O sistema utiliza **OpenCV** e **InsightFace (ArcFace)** para reconhecimento fac
 - [ONNX Runtime](https://onnxruntime.ai/)
 - [SQLite](https://www.sqlite.org/)
 
----------------------------------------------------------
+--------------------------------
 
 ## 📦 Instalação
 
@@ -38,7 +42,9 @@ bash
 git clone https://github.com/seu-usuario/face-access-control.git
 cd face-access-control
 
----------------------------------------------------------
+
+--------------------------------
+
 
 Crie e ative um ambiente virtual:
 
@@ -58,7 +64,9 @@ Instale as dependências:
 
 pip install -r requirements.txt
 
----------------------------------------------------------
+
+--------------------------------
+
 
 ## ▶️ Como Usar
 
@@ -81,7 +89,9 @@ Pressione Q para sair.
 
 O sistema salva os embeddings no banco face_access.db.
 
----------------------------------------------------------
+
+--------------------------------
+
 
 2. Reconhecimento em tempo real (recognize.py)
 
@@ -99,7 +109,9 @@ A face aparecerá com um retângulo vermelho e a mensagem NEGADO.
 
 Pressione Q para sair.
 
----------------------------------------------------------
+
+--------------------------------
+
 
 ## ⚙️ Configurações
 
@@ -112,7 +124,9 @@ Se o sistema estiver reconhecendo errado:
 Aumente o threshold (ex.: 0.45) → mais rígido (menos falsos positivos).
 Diminua o threshold (ex.: 0.33) → mais permissivo (menos falsos negativos).
 
----------------------------------------------------------
+
+--------------------------------
+
 
 ## 📚 Estrutura do Projeto
 face-access-control/
@@ -124,15 +138,18 @@ face-access-control/
 ├── requirements.txt  # Dependências do projeto
 └── README.md         # Documentação
 
----------------------------------------------------------
+
+--------------------------------
+
 
 ## 📊 Demonstração Esperada
 
 Usuário cadastrado → caixa verde + "ACESSO".
 Usuário não cadastrado → caixa vermelha + "NEGADO".
 
----------------------------------------------------------
-https://github.com/pedromcd/appMaterna/issues/1#issue-2317952478
+
+--------------------------------
+
 
 ## 👨‍🎓Autor
 
