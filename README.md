@@ -50,15 +50,17 @@ Crie e ative um ambiente virtual:
 
 python -m venv .venv
 
-# Windows (PowerShell)
+Windows (PowerShell)
 .\.venv\Scripts\Activate.ps1
 
-# Windows (CMD)
+Windows (CMD)
 .\.venv\Scripts\activate.bat
 
-# Linux/Mac
+Linux/Mac
 source .venv/bin/activate
 
+
+--------------------------------
 
 Instale as dependências:
 
