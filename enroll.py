@@ -1,4 +1,5 @@
 import cv2
+import sys
 import numpy as np
 from db_utils import init_db, add_embedding
 from face_utils import build_app, get_faces_and_embeddings
@@ -7,7 +8,7 @@ def main():
     init_db()
     app = build_app()
 
-    name = input("Nome da pessoa a cadastrar: ").strip()
+    name = sys.argv[1].strip()
     if not name:
         print("Nome inválido.")
         return
