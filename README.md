@@ -122,8 +122,12 @@ Projeto desenvolvido por:
 ---
 
 <div align="center">
-<img src="https://github.com/user-attachments/assets/57ec7a4c-1cea-4ceb-ba17-042f896d27c3" alt="Pedro Marques Correa Domingues" width="350px" style="margin-right: 20px;">
+<img src="https://github.com/user-attachments/assets/57ec7a4c-1cea-4ceb-ba17-042f896d27c3" alt="Pedro Marques Correa Domingues" width="350px" 
+height="350px"
+style="object-fit: cover; margin-right: 20px; border-radius: 10px;"/>
 <img src="https://github.com/user-attachments/assets/500d5dd2-eb94-455a-8c0a-9fd95b8fcf15"
 alt="Lucas Bucci Borges"
-width="390px">
+width="350px"
+height="350px"
+style="object-fit: cover; border-radius: 10px;"/>
 </div>
