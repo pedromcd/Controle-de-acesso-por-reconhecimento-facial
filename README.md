@@ -114,8 +114,17 @@ face-access-control/
 
 ## 👨‍🎓Autor
 
-Projeto desenvolvido por Pedro Marques Correa Domingues
+Projeto desenvolvido por:
+
+- Pedro Marques Correa Domingues
+- Lucas Bucci Borges
+
+---
 
 <div align="left">
 <img src="https://github.com/user-attachments/assets/57ec7a4c-1cea-4ceb-ba17-042f896d27c3" alt="Pedro Marques Correa Domingues width="350px"/>
+</div>
+
+<div align="left">
+<img src="https://github.com/user-attachments/assets/500d5dd2-eb94-455a-8c0a-9fd95b8fcf15" alt="Lucas Bucci Borges" width=390px>
 </div>
