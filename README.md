@@ -1,133 +1,105 @@
-# 🔐 Sistema de Controle de Acesso com Reconhecimento Facial
+# Facial Recognition Access Control
 
-Projeto acadêmico da disciplina de **Processamento de Imagens e Sinais** (Ciência da Computação), desenvolvido em Python.  
-O sistema utiliza **OpenCV** e **InsightFace (ArcFace)** para reconhecimento facial, controlando o acesso de pessoas cadastradas.
+**Real-time face-recognition system for access control using Python, OpenCV, InsightFace/ArcFace, ONNX Runtime, and SQLite.**
 
-## 🚀 Funcionalidades
+This academic computer-vision project implements a complete enrollment and recognition pipeline. Users are enrolled from camera captures, converted into facial embeddings, stored locally, and later compared with live camera input to determine whether access should be granted.
 
-- 📸 **Cadastro de usuários (enroll.py):**
-  - Captura imagens da câmera.
-  - Extrai embeddings faciais.
-  - Salva no banco SQLite (`face_access.db`).
-- 👤 **Reconhecimento em tempo real (recognize.py):**
-  - Detecta faces pela câmera.
-  - Compara embeddings cadastrados.
-  - Exibe **ACESSO (verde)** ou **NEGADO (vermelho)**.
-- 🗄 **Banco de dados local:**
-  - Armazena embeddings em SQLite.
-- ⚙️ **Configurações:**
-  - Alteração de câmera e threshold em `config.py`.
+## System pipeline
 
-## 🛠 Tecnologias
+```text
+Enrollment
+Camera frame
+    ↓
+Face detection
+    ↓
+ArcFace embedding
+    ↓
+SQLite storage
 
-- [Python 3.10+](https://www.python.org/)
-- [OpenCV](https://opencv.org/)
-- [InsightFace](https://github.com/deepinsight/insightface)
-- [ONNX Runtime](https://onnxruntime.ai/)
-- [SQLite](https://www.sqlite.org/)
+Recognition
+Camera frame
+    ↓
+Face detection
+    ↓
+ArcFace embedding
+    ↓
+Similarity comparison
+    ↓
+Threshold decision
+    ↓
+Recognized / Not recognized
+```
 
-## 📦 Instalação
+## Main features
 
-Clone o repositório:
+- camera-based user enrollment;
+- extraction of facial embeddings;
+- persistent local storage in SQLite;
+- real-time face detection and recognition;
+- configurable similarity threshold;
+- separation between database, face-processing, enrollment, and recognition modules;
+- simple application entry point.
 
-bash
-git clone https://github.com/seu-usuario/face-access-control.git
-cd face-access-control
+## Tech stack
 
-- Crie e ative um ambiente virtual:
+- Python 3.10+
+- OpenCV
+- InsightFace / ArcFace
+- ONNX Runtime
+- SQLite
 
+## Repository structure
+
+```text
+.
+├── app.py          # Application entry point
+├── config.py       # Camera and threshold configuration
+├── db_utils.py     # SQLite persistence
+├── face_utils.py   # Face detection / embedding utilities
+├── enroll.py       # Enrollment workflow
+├── recognize.py    # Real-time recognition
+├── requirements.txt
+└── README.md
+```
+
+## Configuration
+
+The recognition threshold and camera index are configured in `config.py`.
+
+A stricter threshold reduces false matches but can increase false rejections. A more permissive threshold has the opposite tradeoff. This makes threshold selection an important part of evaluating the system.
+
+## Running the project
+
+Create and activate a virtual environment, then install dependencies:
+
+```bash
 python -m venv .venv
-
-Windows (PowerShell)
-.\.venv\Scripts\Activate.ps1
-Windows (CMD)
-.\.venv\Scripts\activate.bat
-Linux/Mac
-source .venv/bin/activate
-
-- Instale as dependências:
-
 pip install -r requirements.txt
+```
 
-## ▶️ Como Usar
+Run the application:
 
+```bash
 python app.py
+```
 
-1. Cadastro de usuário
+The enrollment flow captures multiple face samples for a user and stores their embeddings. The recognition flow compares embeddings extracted from live camera frames with the enrolled database.
 
-Serve para cadastrar novas pessoas no banco de dados.
+## Machine-learning / research considerations
 
-Digite o nome da pessoa.
+The project is intentionally simple, but it provides a practical base for studying several computer-vision questions:
 
-A câmera será aberta.
+- similarity-threshold calibration;
+- false acceptance vs. false rejection tradeoffs;
+- robustness under changes in lighting, pose, and camera quality;
+- embedding-distance distributions;
+- evaluation across different recognition models;
+- liveness detection and spoofing resistance;
+- privacy-preserving storage of biometric representations.
 
-Pressione C para capturar uma foto do rosto.
+A stronger experimental version could add a labeled evaluation dataset, ROC/DET curves, precision/recall metrics, and systematic threshold selection instead of relying on manual tuning.
 
-Repita 5 vezes, mudando levemente a posição/expressão para aumentar a precisão.
+## Authors
 
-Pressione Q para sair.
-
-O sistema salva os embeddings no banco face_access.db.
-
-2. Reconhecimento em tempo real
-
-Essa função serve para verificar quem tem acesso.
-
-A câmera será aberta e começará a detectar rostos.
-
-Se a pessoa estiver cadastrada:
-A face aparecerá com um retângulo verde e a mensagem ACESSO.
-
-Se a pessoa não estiver cadastrada:
-A face aparecerá com um retângulo vermelho e a mensagem NEGADO.
-
-Pressione Q para sair.
-
-## ⚙️ Configurações
-
-Arquivo config.py:
-
-- THRESHOLD = 0.38 # ajuste de sensibilidade
-- CAM_INDEX = 0 # índice da câmera (0 = webcam padrão)
-
-Se o sistema estiver reconhecendo errado:
-
-- Aumente o threshold (ex.: 0.45) → mais rígido (menos falsos positivos).
-- Diminua o threshold (ex.: 0.33) → mais permissivo (menos falsos negativos).
-
-## 📚 Estrutura do Projeto
-
-face-access-control/
-
-- config.py - # Configurações gerais
-- db_utils.py - # Funções de banco de dados (SQLite)
-- face_utils.py - # Utilidades de reconhecimento facial
-- enroll.py - # Cadastro de usuários
-- recognize.py - # Reconhecimento em tempo real
-- requirements.txt - # Dependências do projeto
-- README.md - # Documentação
-
-## 📊 Demonstração Esperada
-
-- Usuário cadastrado → caixa verde + "ACESSO".
-- Usuário não cadastrado → caixa vermelha + "NEGADO".
-
-## 👨‍🎓Autor
-
-Projeto desenvolvido por:
-
-- Pedro Marques Correa Domingues
-- Lucas Bucci Borges
-
----
-
-<div align="center">
-<img src="https://github.com/user-attachments/assets/57ec7a4c-1cea-4ceb-ba17-042f896d27c3" alt="Pedro Marques Correa Domingues" width="350px" 
-height="350px"
-style="object-fit: cover; margin-right: 20px; border-radius: 10px;"/>
-<img src="https://github.com/user-attachments/assets/500d5dd2-eb94-455a-8c0a-9fd95b8fcf15"
-alt="Lucas Bucci Borges"
-width="350px"
-height="350px"
-style="object-fit: cover; border-radius: 10px;"/>
-</div>
+Pedro Marques Correa Domingues  
+Lucas Bucci Borges
